@@ -13,8 +13,16 @@
   "license": "SEE LICENSE IN <your-license-filename>",
   "repository": "<fill-your-repository-here>",
   "dependencies": {
+    "@c4dt/dynacred": "^0.3.2",
+    "@dedis/cothority": "^3.4.3",
     "@nativescript/theme": "~2.2.1",
-    "tns-core-modules": "~6.3.0"
+    "bufferutil": "^4.0.1",
+    "crypto-browserify": "^3.12.0",
+    "nativescript-websockets": "^1.5.5",
+    "net": "^1.0.2",
+    "tls": "0.0.1",
+    "tns-core-modules": "~6.3.0",
+    "utf-8-validate": "^5.0.2"
   },
   "devDependencies": {
     "nativescript-dev-webpack": "~1.4.0",
