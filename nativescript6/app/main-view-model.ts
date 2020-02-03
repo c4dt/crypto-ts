@@ -3,6 +3,7 @@ import {randomBytes} from "crypto-browserify";
 import {Log} from "@dedis/cothority";
 import {ByzCoinRPC} from "@dedis/cothority/byzcoin";
 import {
+    setFactory,
     WebSocketConnection
 } from "@dedis/cothority/network/connection";
 import {WebSocketAdapter} from "@dedis/cothority/network";
@@ -42,6 +43,7 @@ export class HelloWorldModel extends Observable {
 
         // Set websockets to nativescript-websockets and fetch the latest
         // block from the DEDIS-blockchain
+        setFactory((path: string): WebSocketAdapter => new NativescriptWebSocketAdapter(path));
         const conn = new WebSocketConnection("wss://conode.c4dt.org:7771", "byzcoin");
         const bc = await ByzCoinRPC.fromByzcoin(conn, Buffer.from("9cc36071ccb902a1de7e0d21a2c176d73894b1cf88ae4cc2ba4c95cd76f474f3", "hex"));
         Log.print(bc.getConfig());

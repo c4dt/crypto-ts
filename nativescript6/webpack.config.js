@@ -59,6 +59,7 @@ module.exports = env => {
     const hasRootLevelScopedModules = nsWebpack.hasRootLevelScopedModules({ projectDir: projectRoot });
     let coreModulesPackageName = "tns-core-modules";
     const alias = {
+        'randombytes': resolve(__dirname, 'node_modules/nativescript-randombytes/randombytes-native.android.js'),
         '~': appFullPath
     };
 
@@ -121,6 +122,7 @@ module.exports = env => {
                 `node_modules/${coreModulesPackageName}`,
                 "node_modules",
             ],
+            mainFields: ['browser', 'module', 'main'],
             alias,
             // resolve symlinks to symlinked modules
             symlinks: true
@@ -244,7 +246,7 @@ module.exports = env => {
             // Define useful constants like TNS_WEBPACK
             new webpack.DefinePlugin({
                 "global.TNS_WEBPACK": "true",
-                "process": "global.process",
+                // "process": "global.process",
             }),
             // Remove all files from the out dir.
             new CleanWebpackPlugin(itemsToClean, { verbose: !!verbose }),
