@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Log} from "@dedis/cothority";
 import {ByzCoinRPC} from "@dedis/cothority/byzcoin";
 import {WebSocketConnection} from "@dedis/cothority/network/connection";
-import {randomBytes} from "crypto-browserify";
+import {randomBytes} from "crypto";
 import {KeyPair} from "@c4dt/dynacred";
 
 @Component({
