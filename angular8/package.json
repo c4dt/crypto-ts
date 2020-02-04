@@ -23,7 +23,6 @@
     "@c4dt/dynacred": "^0.3.2",
     "@dedis/cothority": "^3.4.3",
     "bufferutil": "^4.0.1",
-    "crypto-browserify": "^3.12.0",
     "net": "^1.0.2",
     "rxjs": "~6.4.0",
     "tls": "0.0.1",
