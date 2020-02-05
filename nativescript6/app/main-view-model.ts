@@ -1,5 +1,5 @@
 import { Observable } from "tns-core-modules/data/observable";
-import {randomBytes} from "crypto-browserify";
+import {randomBytes} from "crypto";
 import {Log} from "@dedis/cothority";
 import {ByzCoinRPC} from "@dedis/cothority/byzcoin";
 import {
