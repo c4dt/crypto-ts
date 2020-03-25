@@ -109,7 +109,7 @@ npm i -D @angular-builders/custom-webpack
 
 Add a file `extra-webpack.config.json` to your directory:
 ```
-cat <<<EOF > extra-webpack.config.json
+cat <<EOF > extra-webpack.config.json
 module.exports = {
   node: {},
 }
