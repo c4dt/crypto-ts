@@ -1,3 +1,10 @@
+# This repo has been archived
+
+As Angular moved to version 13, and Nativescript moved to version 8, while being overtaken by other frameworks,
+it is time to archive this repo.
+
+As some of its contents might still be of interest, we leave it here.
+
 # Crypto for Angular-8 and Nativescript-6
 
 This is a demo for how to use 
